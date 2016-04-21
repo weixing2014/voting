@@ -3,9 +3,9 @@ import {expect} from 'chai'
 import reducer from '../src/reducer'
 
 describe('reducer', () => {
-  it('handles SET_ENTITIES', () => {
+  it('handles SET_ENTRIES', () => {
     const state = Map()
-    const action = {type: 'SET_ENTITIES', entries: ['28 Days Later']}
+    const action = {type: 'SET_ENTRIES', entries: ['28 Days Later']}
     const nextState = reducer(state, action)
 
     expect(nextState).to.equal(Map({
@@ -48,7 +48,7 @@ describe('reducer', () => {
   })
 
   it('has an initial state', () => {
-    const action = {type: 'SET_ENTITIES', entries: ['28 Days Later']}
+    const action = {type: 'SET_ENTRIES', entries: ['28 Days Later']}
     const nextState = reducer(undefined, action)
 
     expect(nextState).to.equal(Map({
